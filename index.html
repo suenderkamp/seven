@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>SEVEN – Coverband mit Bläsersatz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SEVEN – anspruchsvolle Coverversionen aus 60 Jahren Pop, Rock, Funk & Soul mit druckvollem Bläsersatz.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-light: #f4eee4;
+      --bg-dark: #111111;
+      --accent:  #f5a623; /* Orangegelb */
+      --text-main: #222222;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: var(--bg-dark) !important;
+    }
+
+    .navbar-brand img {
+      max-height: 40px;
+    }
+
+    .hero {
+      padding-top: 6rem;
+      padding-bottom: 5rem;
+      background-color: var(--bg-dark);
+      color: #ffffff;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      letter-spacing: 0.08em;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .btn-accent {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #111;
+      font-weight: 600;
+    }
+
+    .btn-accent:hover {
+      background-color: #e49310;
+      border-color: #e49310;
+      color: #111;
+    }
+
+    section {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+    }
+
+    section:nth-of-type(even) {
+      /* leicht abgesetzte Sektionen */
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title span {
+      color: var(--accent);
+    }
+
+    .seven-list {
+      font-style: italic;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    .download-card {
+      background: #ffffff;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(0,0,0,0.07);
+      padding: 1.5rem;
+      height: 100%;
+    }
+
+    .download-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .badge-accent {
+      background-color: var(--accent);
+      color: #111;
+    }
+
+    footer {
+      background-color: var(--bg-dark);
+      color: #eee;
+      font-size: 0.9rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Kleiner Offset wegen fixed Navbar */
+    :target::before {
+      content: "";
+      display: block;
+      height: 4.5rem;
+      margin-top: -4.5rem;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <!-- Logo-Platzhalter – Pfad anpassen -->
+        <img src="assets/img/seven-logo.svg" alt="SEVEN Logo" class="me-2">
+        <span class="fw-semibold">SEVEN</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Navigation umschalten">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">Band</a></li>
+          <li class="nav-item"><a class="nav-link" href="#meaning">SEVEN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="#downloads">Downloads</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="hero-title mb-3">SEVEN</h1>
+          <p class="hero-subtitle mb-4">
+            Anspruchsvolle Coverversionen aus 60 Jahren Pop, Rock, Funk &amp; Soul – mit druckvollem Bläsersatz
+            und viel Spielfreude. SEVEN covert, was andere sich nicht trauen.
+          </p>
+          <a href="#media" class="btn btn-accent btn-lg me-2 mb-2">Reinhören</a>
+          <a href="#downloads" class="btn btn-outline-light btn-lg mb-2">Technical Rider</a>
+        </div>
+        <div class="col-lg-5 text-lg-end text-center">
+          <!-- Optional: großes Logo oder Bild -->
+          <img src="assets/img/seven-record.png" alt="SEVEN Record Logo" class="img-fluid"
+               style="max-height: 260px;">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Bandinfo -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title"><span>Band</span>info</h2>
+      <div class="row">
+        <div class="col-lg-8">
+          <p>
+            SEVEN covert, was andere sich nicht trauen – überraschend, abwechslungsreich und mit einem
+            druckvollen Bläsersatz, der sofort mitreißt. Die sieben Musiker bringen auf die Bühne,
+            was gute Livemusik ausmacht: Spielfreude, Energie und den Mut, Songs neu zu interpretieren.
+            Immer mit mindestens einem Titel im Repertoire, bei dem man sich fragt:
+            <em>„Wie kommt man bitte darauf, das zu covern?“</em>
+          </p>
+          <p>
+            Bekannt wurden einzelne Mitglieder u. a. als Teil der <strong>Tiny Turner Band</strong>,
+            mit der sie den <strong>Kulturpreis der Stadt Emsdetten</strong> erhielten.
+            In neuer Besetzung – mit frischem Sänger und Bassisten – präsentieren sie sich jetzt als
+            <strong>SEVEN</strong>: eigenständig, neu formiert und hörbar spielfreudig.
+          </p>
+          <p>
+            Zuletzt begeisterte SEVEN beim <strong>Emsdettener September 2025</strong>, wo sie das Stadtfest
+            auf der Frauenstraßen-Bühne eröffneten. Mit abwechslungsreichen Arrangements, ungewöhnlicher
+            Songauswahl und spürbarer Bühnenleidenschaft sorgte die Band schon am Auftaktabend für
+            ausgelassene Stimmung und volle Plätze.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="mb-3">
+            <strong>Stil:</strong><br>
+            anspruchsvolle Coverversionen aus 60 Jahren Pop, Rock, Funk &amp; Soul
+          </div>
+          <div class="mb-3">
+            <strong>Besetzung:</strong><br>
+            Gesang, Gitarre, Bass, Drums, Keyboards &amp; Bläsersatz
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wofür steht SEVEN -->
+  <section id="meaning">
+    <div class="container">
+      <h2 class="section-title">Wofür steht <span>SEVEN</span>?</h2>
+      <div class="row">
+        <div class="col-lg-8">
+          <p class="seven-list">
+sieben Töne, sieben Weltwunder, sieben Meere,
+die glorreichen Sieben, sieben Zwerge, sieben Regenbogenfarben,
+sieben Todsünden, der siebte Sinn, der siebte Himmel,
+sieben Leben (hat mit uns nichts zu tun – aber die 7 passt halt immer),
+„eins zwei drei vier fünf sechs sie–ben“ (Achtel gehen immer)
+und der Siebenschläfer.
+          </p>
+          <p>Irgendwo dazwischen findet man uns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media -->
+  <section id="media">
+    <div class="container">
+      <h2 class="section-title"><span>Media</span></h2>
+      <div class="row g-4">
+        <!-- Video-Placeholder 1 -->
+        <div class="col-md-6">
+          <div class="ratio ratio-16x9 mb-2">
+            <!-- YouTube-URL ersetzen -->
+            <iframe src="https://www.youtube.com/embed/XXXXXXXXXXX"
+                    title="SEVEN Live – Video 1" allowfullscreen></iframe>
+          </div>
+          <p class="mb-0"><strong>SEVEN live</strong> – Beispielvideo (Platzhalter, YouTube-Link ersetzen)</p>
+        </div>
+        <!-- Video-Placeholder 2 -->
+        <div class="col-md-6">
+          <div class="ratio ratio-16x9 mb-2">
+            <iframe src="https://www.youtube.com/embed/YYYYYYYYYYY"
+                    title="SEVEN Live – Video 2" allowfullscreen></iframe>
+          </div>
+          <p class="mb-0"><strong>SEVEN live</strong> – weiteres Beispielvideo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Downloads -->
+  <section id="downloads">
+    <div class="container">
+      <h2 class="section-title"><span>Downloads</span> &amp; Technik</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="download-card">
+            <h3>Technical Rider</h3>
+            <p class="mb-2">Alle technischen Anforderungen für Veranstalter als PDF.</p>
+            <span class="badge badge-accent mb-2">PDF</span><br>
+            <!-- Linkpfad anpassen -->
+            <a href="assets/pdf/seven-technical-rider.pdf" class="btn btn-accent btn-sm" target="_blank">
+              Download
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="download-card">
+            <h3>Stageplot</h3>
+            <p class="mb-2">Bühnenplan mit Positionen &amp; Kanälen.</p>
+            <span class="badge badge-accent mb-2">PDF</span><br>
+            <a href="assets/pdf/seven-stageplot.pdf" class="btn btn-accent btn-sm" target="_blank">
+              Download
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="download-card">
+            <h3>Logo &amp; Presse</h3>
+            <p class="mb-2">SEVEN-Logo und Bandinfo für Presse &amp; Programmhefte.</p>
+            <span class="badge badge-accent mb-2">ZIP</span><br>
+            <a href="assets/zip/seven-presskit.zip" class="btn btn-accent btn-sm" target="_blank">
+              Download
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title"><span>Kontakt</span></h2>
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <p>
+            Booking, Stadtfeste, Firmenevents oder Rückfragen zu Technik und Presse – wir freuen uns über Anfragen.
+          </p>
+          <p class="mb-1"><strong>Kontakt:</strong></p>
+          <p class="mb-1">
+            <!-- Mailadresse anpassen -->
+            E-Mail: <a href="mailto:booking@seven-music.de">booking@seven-music.de</a><br>
+            <!-- Telefon optional -->
+            <!-- Telefon: +49 (0)123 456 789 -->
+          </p>
+          <p class="mb-1">
+            Instagram: <a href="https://www.instagram.com/seven_music" target="_blank">@seven_music</a>
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <!-- Optional: kleines Kontaktformular (ohne Backend nur Optik) -->
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name / Veranstalter</label>
+              <input type="text" class="form-control" id="name" placeholder="Ihr Name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-Mail</label>
+              <input type="email" class="form-control" id="email" placeholder="ihre@mailadresse.de">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Nachricht</label>
+              <textarea class="form-control" id="message" rows="4"
+                        placeholder="Kurzinfos zur Veranstaltung, Datum, Ort …"></textarea>
+            </div>
+            <button type="submit" class="btn btn-accent" disabled>
+              Senden (Platzhalter – ohne Funktion)
+            </button>
+            <div class="form-text">
+              Formular ist aktuell nur Platzhalter – bitte per E-Mail anfragen.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-4">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div>
+          &copy; <span id="year"></span> SEVEN – Coverband. Alle Rechte vorbehalten.
+        </div>
+        <div>
+          <!-- Optional: Links zu Impressum/Datenschutz -->
+          <!-- <a href="#">Impressum</a> · <a href="#">Datenschutz</a> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // aktuelles Jahr im Footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
